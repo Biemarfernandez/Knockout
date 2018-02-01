@@ -1,8 +1,23 @@
 body {
   padding-top: 11px;
+  background: #E5E5E5;
 }
 
-h1.control-label {
-  text-align: center;
-  color: #0E4EBD;
+div.img-center,
+div.page-header img {
+	position: relative;
+	width: 100%; 
+	height: 500px;
 }
+
+p.control-label {
+	position: absolute;
+	font-size: 400%;
+	z-index: 2;
+	top: 320px;
+	left: -20%;
+	color: #FFFFFF;
+	transform: translateX(50%);
+}
+
+p.control-label:hover { color: #636363; }

@@ -1,0 +1,18 @@
+body { background:; }
+
+img.control-label { width: 90%; }
+
+div.img-center,
+img { position: relative; width: 100%; height: 500px; }
+
+.img-center p {
+	position: absolute;
+	font-size: 300%;
+	z-index: 2;
+	top: 290px;
+	left: -5%;
+	color: #056995;
+	transform: translateX(50%);
+}
+
+.img-center p:hover { color: #A6A6A6; }
