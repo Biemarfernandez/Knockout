@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+
+		<title>Servicios</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="css/kendo.common-bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/kendo.bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/kendo.dataviz.min.css" rel="stylesheet"/>
+        <link href="css/kendo.dataviz.bootstrap.min.css" rel="stylesheet"/>
+		
+		<link rel="stylesheet" type="text/css" href="tablesorter/themes/blue/style.css" media="screen">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" >
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+        <!-- Style personalizdo -->
+		<link rel="stylesheet" type="text/css" href="css/style_3.css">
+	</head>
+	<body>
+		<!--          Fired navbar         -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+				</div>
+				<div class="navbar-collapse collapse"><!--        Inicio collapse        -->
+					<div class="container">
+						<ul class="nav navbar-nav">
+						<li><a href="Ultima Evaluacion.html">Evaluación Knockout</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="Servicios.html">Servicios</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="">Contacto</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="Productos.html">Productos</a></li>
+						</ul>
+					</div>
+				</div><!--/.nav-collapse-->
+			</div>
+		</nav>
+		<br><br>
+		<div class="container">
+			<div class="page-header">
+				<div class="row">
+						<h1>Poyecto final</h1>
+				</div>
+			</div>
+			<div class=" row well">
+				<h3><a href="Ultima Evaluacion.html">Evaluación Knockout </a> / About</h3>
+			</div>
+			<div class="page-header">
+				<div class=" row">
+					<h2>Small Shop Car (SSC)  <img class="control-label" src="image/carrito.jpg" width="90" height="75" alt=""><b class="caret"></b></h2>
+				</div>
+			</div>
+		</div>
+
+		<nav class="container well">
+			<div class="page-header">
+				<h2 class="ra-well-title">Orden de Compra</h2>
+			</div>
+			<form role="form" id="listado">
+				<div class="form-horizontal form-widgets col-sm-6">
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="name">Producto (servicio):</label>
+						<input type="text" class="form-control" data-bind="kendoComboBox: { data: producto, value: selectProducto } " id="producto" required="" validationMessage="Enter {0}">
+					</div>
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="price">Precio:</label>
+						<input type="text" class="form-control" data-bind="kendoDropDownList: { data: precio, value: selectPrecio } " id="precio" required="">
+					</div>
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="quantity">Cantidad:</label>
+						<input type="text" class="form-control" data-bind="kendoMaskedTextBox: cantidad" id="cantidad" required="">
+					</div>
+				    <div class="col-sm-10 form-group">
+						<label class="control-label" for="date">Fecha:</label>
+						<input type="text" class="form-control" data-bind="kendoDatePicker: startDate" id="fecha" required="">
+					</div>
+					<div class="col-sm-8 form-group">
+						<label class="control-label" for="country">Pais:</label>
+						<input type="text" class="form-control" data-bind="kendoComboBox: { data: pais, value: selectPais } " id="pais" required="">
+					</div>
+				</div>
+
+				<div class="form-horizontal form-widgets col-sm-6">
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="name">Cliente (Nombre Completo):</label>
+						<input type="text" class="form-control" type="text" data-bind="kendoMaskedTextBox: cliente" id="cliente" required="" validationMessage="Enter {0}">
+					</div>
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="credit">Tipo de targeta Credito:</label>
+						<input type="text" class="form-control" data-bind="kendoDropDownList: { data: credito, value: selectCredito } " id="credito" required="">
+					</div>
+					<div class="col-sm-12 form-group">
+						<label class="control-label" for="targeta">Numero de Targeta:</label>
+						<input type="text" class="form-control" data-bind="kendoMaskedTextBox: targeta" id="targeta" required="">
+					</div>
+				    	<div class="col-sm-12 form-group">
+						<label class="control-label" for="code">Codigo Postal:</label>
+						<input type="text" class="form-control" data-bind="kendoMaskedTextBox: codigo" id="codigo" required="">
+					</div>
+
+					<!-- Secreo los terminos y condiciones (inicio) -->
+					<div class="row">
+						 <div class="col-md-8">
+                    		 <div class="checkbox">
+                           		<label class="custom-option button">
+                            		 <input type="checkbox" id="remember" name="remember" value="acepto"  data-bind="checked:self.te"/>
+                            		     <span class="button-checkbox"></span>
+                            		     <label  for="remember">Acepta los <a href="#">los terminos y condiciones ?</a></label>
+                        	    	</label>
+                    	        </div>
+                	        </div>
+						</div>
+						<!-- Final -->
+					</div>
+					<div class="clearfix"></div><br>
+
+					<div class="buttons-wrap">
+					 	<button class="btn btn-primary" data-bind="click:listarProducto">Registar</button>
+					 	<input class="btn btn-success" type="reset" value="Cancelar" name="Cancelar" />
+					</div>
+			 </form>
+		</nav>
+
+		<div class="container">
+			<div class="page-header">
+				<h3>Lista de Articulos comprados</h3>
+			</div>
+			<table class="tablesorter" id="mytable">
+				<thead>
+					<tr>
+						<th>PRODUCTO</th>
+						<th>PRECIO</th>
+						<th>CANTIDAD</th>
+						<th>PAIS</th>
+						<th>CLIENTE</th>
+						<th>TARGETA</th>
+						<th>ELIMINAR</th>
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: productos">
+					<tr>
+						<td style="width: 23%;">
+							<span class="form-control" data-bind="text:$data.producto"></span>
+						</td>
+						<td style="width: 10%;">
+							<span class="form-control" data-bind="text:$data.precio"></span>
+						</td>
+						<td style="width: 8%;">
+							<span class="form-control" data-bind="text:$data.cantidad"></span>
+						</td>
+						<td style="width: 15%;">
+							<span class="form-control" data-bind="text:$data.pais"></span>
+						</td>
+						<td style="width: 17%;">
+							<span class="form-control" data-bind="text:$data.cliente"></span>
+						</td>
+						<td style="width: 15%;">
+							<span class="form-control" data-bind="text:$data.targeta"></span>
+						</td>
+						<td style="width: 8%;">
+							 <a class="control-label btn btn-danger" href='#' data-bind='click: $parent.eliminarElemento'>Eliminar</a>
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+			<button class="btn btn-default" type="button" value="imprimir planilla" onclick="window.print();">Inprimir</button>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+        <script src="js/kendo.all.min.js"></script>
+        <script src="js/knockout-3.2.0.js"></script>
+        
+        <script src="js/knockout-kendo.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/kendo.validator.min.js"></script>
+        <script type="text/javascript" src="js/kendo.web.min.js"></script>
+        <script type="text/javascript" src="js/ko.transition.slide.js"></script>
+
+        <script type="text/javascript" src="tablesorter/jquery-latest.js"></script> 
+        <script type="text/javascript" src="tablesorter/jquery.tablesorter.js"></script>
+
+	    <script type="text/javascript" src="js/servicios_de_compra.js"></script>
+
+	    <!-- inicio de tablesorter -->
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				$("#mytable").tablesorter();
+			});
+
+		</script>
+	</body>
+</html>
