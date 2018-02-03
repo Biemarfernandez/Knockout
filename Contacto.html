@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+
+		<title></title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="css/kendo.common-bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kendo.bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kendo.dataviz.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kendo.dataviz.bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+
+		<!-- style personalizado -->
+		<link rel="stylesheet" type="text/css" href="css/style_4.css">
+		
+
+		<style type="text/css">
+			html { height: 100%; }
+			body { height: 100%; }
+			#map-container { height: 300px }
+		</style>
+
+	</head>
+	<body>
+		<!--          Fired navbar         -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+				</div>
+				<div class="navbar-collapse collapse"><!--        Inicio collapse        -->
+					<div class="container">
+						<ul class="nav navbar-nav">
+						<li class="active"><a href="">Evaluación Knockout</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="Servicios.html">Servicios</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="Contacto.html">Contactanos</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="Productos.html">Productos</a></li>
+						</ul>
+					</div>
+				</div><!--/.nav-collapse-->
+			</div>
+		</div>
+        <br><br>
+
+        <div class="container">
+        	<div class="page-header">
+        		<h1>Contactenos</h1>
+        	</div>
+        	<div class=" row well">
+				<h3><a href="Ultima Evaluacion.html">Evaluación Knockout </a> / About</h3>
+			</div>
+        </div>
+        <div class="container well">
+        	<div class="row">
+        		<div id="map-outer" class="col-md-13">
+        			<div id="address" class="col-md-3">
+        				<h2>Información</h2>
+        				<address>
+        					<strong>Bolivia Santa Cruz</strong><br>
+        					Casa Matriz, 456-78<br>
+        					67655667<br>
+        					Brasil<br>
+        					<abbr>Contacto:</abbr> + 39 041 240 5411
+        				</address>
+        			</div>
+        			<br>
+        			<div class="container">
+        				<div id="map-container" class="col-md-9"></div>
+        			</div>
+        		</div>
+        	</div><br><br>
+        
+			<form class="form-horizontal well" name="commentform">
+				<div class="container">
+					<div class="form-group">
+					<div class="col-md-8 input-group">
+						<label class="input-group-addon">♀</label>
+						<input  class="form-control" data-bind="kendoMaskedTextBox: usuario" id="usuarioR" placeholder="Nombre Completo">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-8 input-group">
+						<label class="input-group-addon">✆</label>
+						<input  class="form-control" data-bind="kendoMaskedTextBox: telefono" id="telefonoR" placeholder="Escribe su contacto">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-8 input-group">
+						<label class="input-group-addon">@</label>
+						<input  class="form-control" data-bind="kendoMaskedTextBox: gmail" id="gmail" placeholder="example@gmail.com">
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+
+                <div class="form-group">
+                    <div class="col-md-8 input-group">
+						<label class="input-group-addon">Comentario</label>
+						<textarea  class="form-control" rows="8" data-bind="kendoMaskedTextBox: comentario" id="comentarioR" placeholder="Escribe tu cometarios"></textarea>
+					</div>
+                </div><br>
+                <div class="buttons-wrap row">
+                    <button class="btn btn-primary" data-bind="click:agregar ">Registrar</button>
+                    <input class="btn btn-success" type="reset" value="Cancelar" name="Cancelar" />
+                </div>
+				</div>
+		  </form>
+		  <div data-bind="kendoGrid: Registro_contacto"></div>
+		</div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/knockout-3.2.0.js"></script>
+         <script type="text/javascript" src="js/ko.transition.slide.js"></script>
+        <script type="text/javascript" src="js/kendo.all.min.js"></script>
+        <script type="text/javascript" src="js/knockout-kendo.min.js"></script>
+
+        
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+        <!-- script de asignacion de mapa -->
+        <script type="text/javascript" src="js/mi_mapa.js"></script>
+        <script type="text/javascript" src="js/registro_contacto.js"></script>
+		 
+	</body>
+</html>
